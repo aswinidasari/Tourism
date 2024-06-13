@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Form</title>
+  <style>
+    body {
+  background: linear-gradient(to bottom, #2980b9, #6dd5fa);
+}
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.login-form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: bold;
+}
+
+.form-control {
+  width: 100%;
+  height: 40px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.btn-primary {
+  width: 100%;
+  height: 40px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background: #0069d9;
+}
+
+.fa-user,
+.fa-lock,
+.fa-sign-in-alt {
+  margin-right: 10px;
+}
+  </style>
+  <!-- <link rel="stylesheet" type="text/css" href="styles.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <form id="login-form" class="login-form" method="post">
+      <h2>Login</h2>
+      <div class="form-group">
+        <label for="username"><i class="fas fa-user"></i> Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Enter your username">
+      </div>
+      <div class="form-group">
+        <label for="password"><i class="fas fa-lock"></i> Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter your password">
+      </div>
+      <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
+    </form>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <!-- <script src="script.js"></script> -->
+  <script>
+
+$(document).ready(function() {
+  $('#login-form').submit(function(e) {
+    e.preventDefault();
+
+    var username = $('#username').val();
+    var password = $('#password').val();
+  });
+});
+  </script>
+</body>
+</html>
